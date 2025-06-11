@@ -1,0 +1,23 @@
+{
+  "ua": {
+    "title": "ГангстаКлан",
+    "spin": "Обертати",
+    "win": "Ви отримали 1 гопКоін!",
+    "nft": "NFT герой! Вітаємо!",
+    "lose": "Нічого не випало..."
+  },
+  "ru": {
+    "title": "ГангстаКлан",
+    "spin": "Крутить",
+    "win": "Вы получили 1 гопКоин!",
+    "nft": "NFT герой! Поздравляем!",
+    "lose": "Ничего не выпало..."
+  },
+  "en": {
+    "title": "GangstaClan",
+    "spin": "Spin",
+    "win": "You got 1 GopCoin!",
+    "nft": "NFT Hero! Congrats!",
+    "lose": "Nothing dropped..."
+  }
+}
