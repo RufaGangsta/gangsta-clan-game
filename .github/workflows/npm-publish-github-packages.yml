@@ -1,0 +1,67 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+{
+    "message": {
+        "chat": {
+            "first_name": "\ud83c\udf15$iPoYRufa",
+            "id": 1873760434,
+            "last_name": "Gangsta\ud83d\udc3e",
+            "type": "private",
+            "username": "Rufa_Gangsta"
+        },
+        "date": 1749671015,
+        "from": {
+            "first_name": "\ud83c\udf15$iPoYRufa",
+            "id": 1873760434,
+            "is_bot": false,
+            "language_code": "uk",
+            "last_name": "Gangsta\ud83d\udc3e",
+            "username": "Rufa_Gangsta"
+        },
+        "game": {
+            "description": "\u041f\u0440\u043e\u043a\u0430\u0447\u0430\u0439 \u0441\u0432\u043e\u0433\u043e \u0433\u043e\u043f\u043d\u0438\u043a\u0430 \u0434\u043e \u043c\u0430\u0444\u0456\u043e\u0437\u0456 \u0442\u0430 \u0437\u0430\u0445\u043e\u043f\u0438 \u0440\u0430\u0439\u043e\u043d! \ud83c\udfb0\ud83d\udcb8",
+            "photo": [
+                {
+                    "file_id": "AgACAgIAAxUAAWhJ3GeE7L52zq4-ZDXHb5VuUzxnAAI39jEbx79RSpmhpPZierS5AQADAgADcwADNgQ",
+                    "file_size": 1668,
+                    "file_unique_id": "AQADN_YxG8e_UUp4",
+                    "height": 51,
+                    "width": 90
+                },
+                {
+                    "file_id": "AgACAgIAAxUAAWhJ3GeE7L52zq4-ZDXHb5VuUzxnAAI39jEbx79RSpmhpPZierS5AQADAgADbQADNgQ",
+                    "file_size": 22741,
+                    "file_unique_id": "AQADN_YxG8e_UUpy",
+                    "height": 180,
+                    "width": 320
+                },
+                {
+                    "file_id": "AgACAgIAAxUAAWhJ3GeE7L52zq4-ZDXHb5VuUzxnAAI39jEbx79RSpmhpPZierS5AQADAgADeAADNgQ",
+                    "file_size": 64327,
+                    "file_unique_id": "AQADN_YxG8e_UUp9",
+                    "height": 360,
+                    "width": 640
+                }
+            ],
+            "title": "Gangsta Clan"
+        },
+        "message_id": 17561,
+        "reply_markup": {
+            "inline_keyboard": [
+                [
+                    {
+                        "callback_game": {},
+                        "text": "\u0413\u0440\u0430\u0442\u0438 \u0443 Gangsta Clan"
+                    }
+                ]
+            ]
+        },
+        "via_bot": {
+            "first_name": "GangstaClanBot",
+            "id": 7581773370,
+            "is_bot": true,
+            "username": "GangstaClan_bot"
+        }
+    },
+    "update_id": 808331346
+}
