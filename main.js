@@ -16,9 +16,9 @@ document.getElementById('spinBtn').addEventListener('click', () => {
   const resultEl = document.getElementById('result');
   const nftEl = document.getElementById('nftDrop');
   const rand = Math.random();
-  if (rand < 0.0001) { // 0.01% chance
+  if (rand < 0.0000001) { // 0.0001% chance
     nftEl.textContent = '🎴 Та ну н@х во подгон NFT-герой!';
-  } else if (rand < 0.3) {
+  } else if (rand < 0.7) {
     resultEl.textContent = '💰 Сюда бLя,бабос: ' + (Math.floor(Math.random()*100) + 1) + ' монет';
   } else {
     resultEl.textContent = '😢 Голяк';
