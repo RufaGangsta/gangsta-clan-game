@@ -4,7 +4,7 @@ document.getElementById("spin").onclick = function() {
   let message = "";
   if (result < 0.0000001) {
     message = "🎉Ну ніхуя*сє NFT,Красава!";
-  } else if (result < 0.3) {
+  } else if (result < 0.7) {
     coins++;
     message = "💰 Подгончик 1 гопКоін!";
   } else {
