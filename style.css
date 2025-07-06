@@ -1,20 +1,45 @@
 body {
-  background: #111;
+  background-color: #111;
   color: #fff;
-  font-family: sans-serif;
+  font-family: 'Arial', sans-serif;
   text-align: center;
-  padding-top: 50px;
+  margin: 0;
+  padding: 0;
 }
-#spinBtn {
-  padding: 15px 30px;
+
+button {
+  padding: 12px 24px;
   font-size: 18px;
-  background: #c00;
+  border-radius: 12px;
   border: none;
-  color: #fff;
   cursor: pointer;
-  border-radius: 5px;
-}
-#result, #nftDrop {
+  background: gold;
+  color: #000;
   margin-top: 20px;
-  font-size: 20px;
+}
+
+#slot-result {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+#nft-drop {
+  display: none;
+  padding: 20px;
+  border: 2px solid #ffcc00;
+  border-radius: 16px;
+  background-color: #222;
+  margin: 20px auto;
+  width: 250px;
+  animation: fadeIn 0.7s ease-out;
+}
+
+#nft-drop img {
+  width: 120px;
+  border-radius: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
