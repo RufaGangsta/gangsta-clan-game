@@ -1,12 +1,14 @@
 {
   "ua": {
     "spin": "Крутити",
+    "win_nft": "🎉 Вітаю! Ви виграли унікальний NFT-герой!",
     "win": "🎉 Вітаю! Ви виграли NFT!",
     "coins": "Непогано! Ви виграли монети!",
     "lose": "Спробуйте ще!"
   },
   "en": {
     "spin": "Spin",
+    "win_nft": "🎉 Congratulations! You won a unique NFT!",
     "win": "🎉 Congratulations! You won an NFT!",
     "coins": "Not bad! You won coins!",
     "lose": "Try again!"

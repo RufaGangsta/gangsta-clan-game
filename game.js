@@ -1,56 +1,28 @@
-let coins = 0;
-document.getElementById("spin").onclick = function() {
-  const result = Math.random();
-  let message = "";
-  if (result < 0.0000001) {
-    message = "🎉Ну ніхуя*сє NFT,Красава!";
-  } else if (result < 0.7) {
-    coins++;
-    message = "💰 Подгончик 1 гопКоін!";
-  } else {
-    message = "😢 Піз*дос,крути ще...";
-  }
-  document.getElementById("result").innerText = message;
-  document.getElementById("coins").innerText = coins;
-  
-};const slotSymbols = ['🍒', '💎', '🍋', '💰', '7️⃣'];
+// game.js contains the core slot logic
+const GameLogic = (function() {
+  const symbols = ['🍒', '🍋', '🍇', '💰', '💎', '👑'];
+  const NFT_CHANCE = 0.0001; // 0.01%
+  const COIN_WIN_CHANCE = 0.3;
 
-const nftList = [
-  { name: "Gangsta NFT", image: "nft/gangsta1.png" },
-  { name: "Boss NFT", image: "nft/mafia_boss.png" }
-];
-const nftChance = 0.0000001; // 0.00001%
-
-function spinSlot() {
-  const result = [];
-
-  for (let i = 0; i < 3; i++) {
-    const symbol = slotSymbols[Math.floor(Math.random() * slotSymbols.length)];
-    result.push(symbol);
+  function getRandomSymbol() {
+    return symbols[Math.floor(Math.random() * symbols.length)];
   }
 
-  showSlotResult(result);
-
-  const drop = Math.random();
-  if (drop < nftChance) {
-    const nft = nftList[Math.floor(Math.random() * nftList.length)];
-    showNFT(nft);
-  } else {
-    hideNFT();
+  function spin() {
+    const slots = [getRandomSymbol(), getRandomSymbol(), getRandomSymbol()];
+    let message = '';
+    // Check NFT
+    if (Math.random() < NFT_CHANCE) {
+      message = '🎉 Вітаю! Ви виграли унікальний NFT-герой!';
+    } else if (slots[0] === slots[1] && slots[1] === slots[2]) {
+      message = '🎉 Вітаю! Ви виграли NFT!';
+    } else if (slots[0] === slots[1] || slots[1] === slots[2] || slots[0] === slots[2]) {
+      message = 'Непогано! Ви виграли монети!';
+    } else {
+      message = 'Спробуйте ще!';
+    }
+    return { slots, message };
   }
-}
 
-function showSlotResult(res) {
-  const resultDiv = document.getElementById('slot-result');
-  resultDiv.textContent = res.join(' ');
-}
-
-function showNFT(nft) {
-  document.getElementById('nft-drop').style.display = 'block';
-  document.getElementById('nft-image').src = nft.image;
-  document.getElementById('nft-name').textContent = nft.name;
-}
-
-function hideNFT() {
-  document.getElementById('nft-drop').style.display = 'none';
-      }
+  return { spin };
+})();
