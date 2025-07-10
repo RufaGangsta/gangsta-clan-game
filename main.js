@@ -1,26 +1,22 @@
-// ==== Language loader ====
-let currentLang = 'ua'; // 'en', 'ru' можна вибрати тут
+const symbols = ['🍒', '🍋', '🍇', '💰', '💎', '👑'];
+const slot1 = document.getElementById("slot1");
+const slot2 = document.getElementById("slot2");
+const slot3 = document.getElementById("slot3");
+const result = document.getElementById("result");
 
-async function loadLang() {
-  const response = await fetch('lang.json');
-  const langs = await response.json();
-  const lang = langs[currentLang];
+function spin() {
+  const s1 = symbols[Math.floor(Math.random() * symbols.length)];
+  const s2 = symbols[Math.floor(Math.random() * symbols.length)];
+  const s3 = symbols[Math.floor(Math.random() * symbols.length)];
+  slot1.innerText = s1;
+  slot2.innerText = s2;
+  slot3.innerText = s3;
 
-  document.getElementById('title').textContent = lang.title;
-  document.getElementById('spin-btn').textContent = lang.spin;
-  document.getElementById('nft-won-text').textContent = lang.nft_won;
-}
-window.onload = loadLang;
-
-document.getElementById('spinBtn').addEventListener('click', () => {
-  const resultEl = document.getElementById('result');
-  const nftEl = document.getElementById('nftDrop');
-  const rand = Math.random();
-  if (rand < 0.0000001) { // 0.0001% chance
-    nftEl.textContent = '🎴 Та ну н@х во подгон NFT-герой!';
-  } else if (rand < 0.7) {
-    resultEl.textContent = '💰 Сюда бLя,бабос: ' + (Math.floor(Math.random()*100) + 1) + ' монет';
+  if (s1 === s2 && s2 === s3) {
+    result.innerText = "🎉 Вітаю! Ви виграли NFT!";
+  } else if (s1 === s2 || s2 === s3 || s1 === s3) {
+    result.innerText = "Непогано! Ви виграли монети!";
   } else {
-    resultEl.textContent = '😢 Голяк';
+    result.innerText = "Спробуйте ще!";
   }
-});
+}
