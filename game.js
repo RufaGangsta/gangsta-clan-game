@@ -1,7 +1,7 @@
 // game.js contains the core slot logic
 const GameLogic = (function() {
   const symbols = ['🍒', '🍋', '🍇', '💰', '💎', '👑'];
-  const NFT_CHANCE = 0.0001; // 0.01%
+  const NFT_CHANCE = 0.0000001; // 0.0001%
   const COIN_WIN_CHANCE = 0.3;
 
   function getRandomSymbol() {
@@ -13,13 +13,13 @@ const GameLogic = (function() {
     let message = '';
     // Check NFT
     if (Math.random() < NFT_CHANCE) {
-      message = '🎉 Вітаю! Ви виграли унікальний NFT-герой!';
+      message = '🎉 Хароош!NFT,нех*уйвий подгон';
     } else if (slots[0] === slots[1] && slots[1] === slots[2]) {
-      message = '🎉 Вітаю! Ви виграли NFT!';
+      message = '🎉 Та ну н@х ти фартовий,NFT';
     } else if (slots[0] === slots[1] || slots[1] === slots[2] || slots[0] === slots[2]) {
-      message = 'Непогано! Ви виграли монети!';
+      message = 'Харош! Лови подгон монети!';
     } else {
-      message = 'Спробуйте ще!';
+      message = 'Давай ще,ща полюбасу буде!';
     }
     return { slots, message };
   }
