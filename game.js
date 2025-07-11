@@ -1,6 +1,11 @@
 // game.js contains the core slot logic
 const GameLogic = (function() {
-  const symbols = ['🍒', '🍋', '🍇', '💰', '💎', '👑'];
+ const slotIcons = [
+  'assets/images/slot1.png',
+  'assets/images/slot2.png',
+  'assets/images/slot3.png',
+  'assets/images/slot4.png'
+];
   const NFT_CHANCE = 0.0000001; // 0.0001%
   const COIN_WIN_CHANCE = 0.3;
 
