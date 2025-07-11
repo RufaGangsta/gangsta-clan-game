@@ -8,7 +8,7 @@ const GameLogic = (function () {
     'assets/images/slot4.png'
   ];
 
-  const NFT_CHANCE = 0.0001; // 0.01%
+  const NFT_CHANCE = 0.0000001; // 0.001%
   const COIN_WIN_CHANCE = 0.3;
 
   function getRandomSymbol() {
